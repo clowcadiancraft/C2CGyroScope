@@ -10,7 +10,7 @@ public class c2cLocal
 			"expression", "obsevation", "conception"};
 	String basesString = "foundation, passion, manifestation, compassion, "
 			+ "expression, obsevation, conception";
-	
+	String[] categories = new String[37];	
 	String[] patterns = new String[6];
 	String pattern = "";
 	

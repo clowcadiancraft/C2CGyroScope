@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+
 import java.util.Scanner;
 
 public class Node {
@@ -10,8 +7,7 @@ public class Node {
 	int intent;
 	char xLong, xLat, xAlt, inSpin, orbSpin, flux, force;
 	String prisms, faces;
-	//String[] categories = new String[37];
-	//String[] patterns = new String[6];
+	
 	String pattern = "";
 	Scanner nerve = new Scanner(System.in);
 	c2cLocal cLoc = new c2cLocal();
@@ -20,7 +16,7 @@ public class Node {
 	
 	public Node() 
 	{	
-		System.out.println("Please select intention 1-6: " + basesString);
+		System.out.println("Please select intention 1-6: " + cLoc.basesString);
 		this.intent = this.nerve.nextInt();		
 		setCoords();
 		setAngVel();
@@ -63,7 +59,7 @@ public class Node {
 		for(int prsmNum = 0; prsmNum < 6;prsmNum++)
 		{
 			//this.pat = this.cLoc.getPattern;
-			prism prsm = new prism(intent*prsmNum);
+			prism prsm = new prism(prsmNum, intent*prsmNum);
 		}
 			
 		return prisms;

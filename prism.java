@@ -7,7 +7,7 @@ public class prism {
 	String pat = "";
 	Scanner nerve = new Scanner(System.in);
 	
-	public prism(int intent)
+	public prism(int intent, int nodeId)
 	{		
 		for(int vecNum = 0; vecNum < 6; vecNum++)
 		{
