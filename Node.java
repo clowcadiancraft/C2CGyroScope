@@ -55,10 +55,10 @@ public class Node {
 	
 	public String setPrisms(int intent)
 	{
+		this.pat = this.cLoc.getPattern(intent);
 		
 		for(int prsmNum = 0; prsmNum < 6;prsmNum++)
 		{
-			//this.pat = this.cLoc.getPattern;
 			prism prsm = new prism(prsmNum, intent*prsmNum);
 		}
 			

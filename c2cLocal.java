@@ -17,8 +17,7 @@ public class c2cLocal
 	public c2cLocal()
 	{
 		try 
-		{
-			
+		{			
 			BufferedReader patReader = new BufferedReader(new FileReader(
 					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BasePatterns.txt"));
 			for (int i = 0; i < pattern.length(); i++)
@@ -29,21 +28,13 @@ public class c2cLocal
 			patReader.close();
 			
 		} 
-		catch (FileNotFoundException e) {
-			
-			e.printStackTrace();
-			
-		} catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
+		catch (FileNotFoundException e) {e.printStackTrace();} 
+		catch (IOException e) {e.printStackTrace();		}
 	}
 	
 	public String getPattern(int category)
 	{
-		this.pattern = this.patterns[category];
-		return pattern;
-		
+		return this.pattern = this.patterns[category];		
 	}
 
 }
