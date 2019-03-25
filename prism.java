@@ -9,8 +9,11 @@ public class prism {
 	
 	public prism(int intent)
 	{		
+		for(int vecNum = 0; vecNum < 6; vecNum++)
+		{
+			this.cLoc.getPattern(intent);
+		}
 		
-		this.cLoc.getPattern(intent);
 		
 	}
 

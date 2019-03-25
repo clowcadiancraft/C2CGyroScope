@@ -9,7 +9,9 @@ public class vector {
 	public vector(int intent)
 	{		
 		
-		this.cLoc.getPattern(intent);
+		for(int angNum = 0; angNum < 6; angNum++)
+		{
+			this.cLoc.getPattern(intent);
 		
 	}
 

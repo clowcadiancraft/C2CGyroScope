@@ -13,10 +13,12 @@ public class Node {
 	int intent;
 	char xLong, xLat, xAlt, inSpin, orbSpin, flux, force;
 	String prisms, faces;
-	String[] categories = new String[37];
-	String[] patterns = new String[6];
+	//String[] categories = new String[37];
+	//String[] patterns = new String[6];
 	String pattern = "";
 	Scanner nerve = new Scanner(System.in);
+	c2cLocal cLoc = new c2cLocal();
+	String pat = "";
 	
 	
 	public Node() 
@@ -27,7 +29,7 @@ public class Node {
 		setCoords();
 		setAngVel();
 		setMagField();
-		setPrism(this.intent);
+		setPrisms(this.intent);
 		//System.out.println("Please select preffered Amount of Prism over 3");
 		//System.out.println("Please assume the flux force between 1-6: ");
 		//this.force = (char) this.nerve.nextInt();
@@ -59,62 +61,17 @@ public class Node {
 		this.force = (char) this.nerve.nextInt();
 	}
 	
-	public String setPrism(int intent)
+	public String setPrisms(int intent)
 	{
 		
+		for(int prsmNum = 0; prsmNum < 6;prsmNum++)
+		{
+			this.cLoc.getPattern(intent);
+		}
 			
 		return prisms;
 		
 	}
-	
-	public String setFace(String Prism)
-	{
-		return faces;
-		
-	}
-	
-	public void setPrep()
-	{
-		try 
-		{
-			
-			BufferedReader catReader = new BufferedReader(new FileReader(
-					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BaseCategories.txt"));
-			for (int i = 0; i < categories.length; i++)
-			{
-				this.categories[i] = catReader.readLine();
-				//System.out.println(categories[i]);
-			}
-			catReader.close();
-			
-		} 
-		catch (FileNotFoundException e) {
-			
-			e.printStackTrace();
-			
-		} catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
-		
 
-	}
-	
-	
-	
-	/*
-	 * public static void nodeCreate() {
-	 * 
-	 * 
-	 * 
-	 * 
-	 * for (int base = 0; base < bases.length-1; base++) { String catStr = ""; for
-	 * (int row = 0; row < 6; row++) { catStr += cat[((row+1)*(base+1))-1] + " "; }
-	 * System.out.println("Please choose a " + bases[base] + ": " + catStr); catStr
-	 * = ""; }
-	 * 
-	 * 
-	 * }
-	 */
 
 }
