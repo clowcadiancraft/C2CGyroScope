@@ -10,9 +10,12 @@ public class Node {
 			"expression", "obsevation", "conception"};
 	String basesString = "foundation, passion, manifestation, compassion, "
 			+ "expression, obsevation, conception";
-	char intent, xLong, xLat, xAlt, inSpin, orbSpin, flux, force;
+	int intent;
+	char xLong, xLat, xAlt, inSpin, orbSpin, flux, force;
 	String prisms, faces;
 	String[] categories = new String[37];
+	String[] patterns = new String[6];
+	String pattern = "";
 	Scanner nerve = new Scanner(System.in);
 	
 	
@@ -20,7 +23,7 @@ public class Node {
 	{	
 		setPrep();
 		System.out.println("Please select intention 1-6: " + basesString);
-		this.intent = (char) this.nerve.nextInt();		
+		this.intent = this.nerve.nextInt();		
 		setCoords();
 		setAngVel();
 		setMagField();
@@ -56,10 +59,10 @@ public class Node {
 		this.force = (char) this.nerve.nextInt();
 	}
 	
-	public String setPrism()
+	public String setPrism(int intent)
 	{
 		
-		for		
+			
 		return prisms;
 		
 	}
@@ -79,10 +82,32 @@ public class Node {
 					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BaseCategories.txt"));
 			for (int i = 0; i < categories.length; i++)
 			{
-				categories[i] = catReader.readLine();
+				this.categories[i] = catReader.readLine();
 				//System.out.println(categories[i]);
 			}
 			catReader.close();
+			
+		} 
+		catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+			
+		} catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+		
+		try 
+		{
+			
+			BufferedReader patReader = new BufferedReader(new FileReader(
+					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BasePatterns.txt"));
+			for (int i = 0; i < categories.length; i++)
+			{
+				this.patterns[i] = patReader.readLine();
+				//System.out.println(categories[i]);
+			}
+			patReader.close();
 			
 		} 
 		catch (FileNotFoundException e) {
