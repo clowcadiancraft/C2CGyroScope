@@ -97,27 +97,7 @@ public class Node {
 			e.printStackTrace();
 		}
 		
-		try 
-		{
-			
-			BufferedReader patReader = new BufferedReader(new FileReader(
-					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BasePatterns.txt"));
-			for (int i = 0; i < categories.length; i++)
-			{
-				this.patterns[i] = patReader.readLine();
-				//System.out.println(categories[i]);
-			}
-			patReader.close();
-			
-		} 
-		catch (FileNotFoundException e) {
-			
-			e.printStackTrace();
-			
-		} catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
+
 	}
 	
 	
