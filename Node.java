@@ -24,7 +24,7 @@ public class Node {
 		setCoords();
 		setAngVel();
 		setMagField();
-		
+		setPrism(this.intent);
 		//System.out.println("Please select preffered Amount of Prism over 3");
 		//System.out.println("Please assume the flux force between 1-6: ");
 		//this.force = (char) this.nerve.nextInt();
@@ -58,13 +58,15 @@ public class Node {
 	
 	public String setPrism()
 	{
-		return prism;
+		
+		for		
+		return prisms;
 		
 	}
 	
 	public String setFace(String Prism)
 	{
-		return face;
+		return faces;
 		
 	}
 	
