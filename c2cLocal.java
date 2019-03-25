@@ -6,6 +6,11 @@ import java.io.IOException;
 public class c2cLocal 
 {
 	
+	String[] bases = {"foundation", "passion", "manifestation", "compassion",
+			"expression", "obsevation", "conception"};
+	String basesString = "foundation, passion, manifestation, compassion, "
+			+ "expression, obsevation, conception";
+	
 	String[] patterns = new String[6];
 	String pattern = "";
 	

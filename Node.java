@@ -6,10 +6,7 @@ import java.util.Scanner;
 
 public class Node {
 	
-	String[] bases = {"foundation", "passion", "manifestation", "compassion",
-			"expression", "obsevation", "conception"};
-	String basesString = "foundation, passion, manifestation, compassion, "
-			+ "expression, obsevation, conception";
+
 	int intent;
 	char xLong, xLat, xAlt, inSpin, orbSpin, flux, force;
 	String prisms, faces;
