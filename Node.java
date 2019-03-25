@@ -23,7 +23,6 @@ public class Node {
 	
 	public Node() 
 	{	
-		setPrep();
 		System.out.println("Please select intention 1-6: " + basesString);
 		this.intent = this.nerve.nextInt();		
 		setCoords();
@@ -66,7 +65,8 @@ public class Node {
 		
 		for(int prsmNum = 0; prsmNum < 6;prsmNum++)
 		{
-			this.cLoc.getPattern(intent);
+			//this.pat = this.cLoc.getPattern;
+			prism prsm = new prism(intent*prsmNum);
 		}
 			
 		return prisms;
