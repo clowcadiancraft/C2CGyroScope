@@ -8,16 +8,9 @@ public class Gui {
 
 	public static void main(String[] args) 
 	{
-		Node node = new Node();
-		
-		
+		CNode node = new CNode();		
 
 	}
-	public void nodeRet()
-	{
-		this.lastNode = "";		
-	}
-	
 	
 	
 

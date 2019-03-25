@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class triage {
+public class CTriage {
 	
 	c2cLocal cLoc = new c2cLocal();
 	String state = "";
@@ -8,10 +8,10 @@ public class triage {
 	String forward = "";
 	Scanner nerve = new Scanner(System.in);
 	
-	public triage(int type)
+	public CTriage(int type, int theme)
 	{		
 		
-		System.out.println("FOCUS: " + cLoc.bases(type));
+		System.out.println("FOCUS TRIAGE: " + cLoc.getTheme(theme));
 		
 		for(int angNum = 0; angNum < 3; angNum++)
 		{

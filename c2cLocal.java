@@ -12,18 +12,19 @@ public class c2cLocal
 			+ "expression, obsevation, conception";
 	String[] categories = new String[37];	
 	String[] patterns = new String[6];
-	String pattern = "";
+	String row = "";
+	String theme = "";
 	
 	public c2cLocal()
 	{
 		try 
 		{			
 			BufferedReader patReader = new BufferedReader(new FileReader(
-					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BasePatterns.txt"));
-			for (int i = 0; i < pattern.length(); i++)
+					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BaseCategories.txt"));
+			for (int i = 0; i < patterns.length; i++)
 			{
 				this.patterns[i] = patReader.readLine();
-				//System.out.println(categories[i]);
+				System.out.println(this.patterns[i-1]);
 			}
 			patReader.close();
 			
@@ -32,9 +33,18 @@ public class c2cLocal
 		catch (IOException e) {e.printStackTrace();		}
 	}
 	
-	public String getPattern(int category)
+	public String getPattern(int rowNum)
 	{
-		return this.pattern = this.patterns[category];		
+		System.out.println(this.patterns[rowNum]);
+		return this.row = this.patterns[rowNum];		
 	}
+	
+	public String getTheme(int intent, int passion) {
+		return this.theme = this.categories[intent*passion];
+	}
+	public String getTheme(int id) {
+		return this.theme = this.categories[id];
+	}
+
 
 }

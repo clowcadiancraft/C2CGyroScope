@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Node {
+public class CNode {
 	
 
 	int intent;
@@ -10,21 +10,20 @@ public class Node {
 	
 	String pattern = "";
 	Scanner nerve = new Scanner(System.in);
-	c2cLocal cLoc = new c2cLocal();
+	c2cLocal cLoc;
 	String pat = "";
 	
 	
-	public Node() 
+	public CNode() 
 	{	
+		cLoc = new c2cLocal();
 		System.out.println("Please select intention 1-6: " + cLoc.basesString);
-		this.intent = this.nerve.nextInt();		
-		setCoords();
-		setAngVel();
-		setMagField();
+		this.intent = this.nerve.nextInt();	
+		//System.out.println(this.intent);
+		//setCoords();
+		//setAngVel();
+		//setMagField();
 		setPrisms(this.intent);
-		//System.out.println("Please select preffered Amount of Prism over 3");
-		//System.out.println("Please assume the flux force between 1-6: ");
-		//this.force = (char) this.nerve.nextInt();
 	}
 	
 	public void setCoords()
@@ -56,10 +55,11 @@ public class Node {
 	public String setPrisms(int intent)
 	{
 		this.pat = this.cLoc.getPattern(intent);
+		System.out.println(this.pat);
 		
-		for(int prsmNum = 0; prsmNum < 6;prsmNum++)
+		for(int prsmNum = 0; prsmNum < 6; prsmNum++)
 		{
-			prism prsm = new prism(prsmNum, intent*prsmNum);
+			CPrism prsm = new CPrism(prsmNum, intent * prsmNum);
 		}
 			
 		return prisms;
