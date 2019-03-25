@@ -33,5 +33,12 @@ public class c2cLocal
 			e.printStackTrace();
 		}
 	}
+	
+	public String getPattern(int category)
+	{
+		this.pattern = this.patterns[category];
+		return pattern;
+		
+	}
 
 }
