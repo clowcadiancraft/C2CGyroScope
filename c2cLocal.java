@@ -2,18 +2,20 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
-public class c2cLocal 
+public abstract class c2cLocal 
 {
 	
-	String[] bases = {"foundation", "passion", "manifestation", "compassion",
+	public String[] bases = {"foundation", "passion", "manifestation", "compassion",
 			"expression", "obsevation", "conception"};
-	String basesString = "foundation, passion, manifestation, compassion, "
+	public String basesString = "foundation, passion, manifestation, compassion, "
 			+ "expression, obsevation, conception";
-	
-	String[] patterns = new String[6];
-	String row = "";
-	String theme = "";
+	public String[] categories = new String[37];	
+	public String[] patterns = new String[6];
+	public String row = "";
+	public String theme = "";
+	public Scanner nerve = new Scanner(System.in);
 	
 	public c2cLocal()
 	{
@@ -35,11 +37,10 @@ public class c2cLocal
 	
 	public String getPattern(int intent)
 	{
-		String[] categories = new String[37];	
-		for (int patStrt = 0; patStrt < 6; patStrt++)
-			this.patterns = categories[intent * 6 + 1];
-		this.row = String.join(",", name);
-		return this.row = this.patterns[rowNum];		
+		
+		System.arraycopy(categories, intent*6, patterns, 0, 6);
+		this.row = String.join(",", patterns[6]);
+		return this.row;
 	}
 	
 	public String getTheme(int intent, int passion) {
