@@ -10,7 +10,7 @@ public class c2cLocal
 			"expression", "obsevation", "conception"};
 	String basesString = "foundation, passion, manifestation, compassion, "
 			+ "expression, obsevation, conception";
-	String[] categories = new String[37];	
+	
 	String[] patterns = new String[6];
 	String row = "";
 	String theme = "";
@@ -24,7 +24,7 @@ public class c2cLocal
 			for (int i = 0; i < patterns.length; i++)
 			{
 				this.patterns[i] = patReader.readLine();
-				System.out.println(this.patterns[i-1]);
+				//System.out.println(this.patterns[i]);
 			}
 			patReader.close();
 			
@@ -33,9 +33,12 @@ public class c2cLocal
 		catch (IOException e) {e.printStackTrace();		}
 	}
 	
-	public String getPattern(int rowNum)
+	public String getPattern(int intent)
 	{
-		System.out.println(this.patterns[rowNum]);
+		String[] categories = new String[37];	
+		for (int patStrt = 0; patStrt < 6; patStrt++)
+			this.patterns = categories[intent * 6 + 1];
+		this.row = String.join(",", name);
 		return this.row = this.patterns[rowNum];		
 	}
 	

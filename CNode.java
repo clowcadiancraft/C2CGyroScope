@@ -10,13 +10,12 @@ public class CNode {
 	
 	String pattern = "";
 	Scanner nerve = new Scanner(System.in);
-	c2cLocal cLoc;
+	c2cLocal cLoc = new c2cLocal();
 	String pat = "";
 	
 	
 	public CNode() 
 	{	
-		cLoc = new c2cLocal();
 		System.out.println("Please select intention 1-6: " + cLoc.basesString);
 		this.intent = this.nerve.nextInt();	
 		//System.out.println(this.intent);
@@ -54,11 +53,12 @@ public class CNode {
 	
 	public String setPrisms(int intent)
 	{
-		this.pat = this.cLoc.getPattern(intent);
-		System.out.println(this.pat);
 		
 		for(int prsmNum = 0; prsmNum < 6; prsmNum++)
-		{
+		{			
+			this.pat = this.cLoc.getPattern(intent, prsmNum);
+			System.out.println(this.pat);
+			
 			CPrism prsm = new CPrism(prsmNum, intent * prsmNum);
 		}
 			
