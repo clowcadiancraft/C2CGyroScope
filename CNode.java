@@ -11,7 +11,7 @@ public class CNode {
 	String pattern = "";
 	Scanner nerve = new Scanner(System.in);
 	c2cLocal cLoc = new c2cLocal();
-	String pat = "";
+	//String theme = "";
 	
 	
 	public CNode() 
@@ -53,13 +53,16 @@ public class CNode {
 	
 	public String setPrisms(int intent)
 	{
+		System.out.println("FOCUS PRISM: " + cLoc.getTheme(intent - 1));		
 		
 		for(int prsmNum = 0; prsmNum < 6; prsmNum++)
-		{			
-			this.pat = this.cLoc.getPattern(intent, prsmNum);
-			System.out.println(this.pat);
+		{	
+			//this.theme = this.cLoc.getTheme(intent, prsmNum);
 			
-			CPrism prsm = new CPrism(prsmNum, intent * prsmNum);
+			// = this.cLoc.getPattern(prsmNum);
+			//System.out.println(this.pat);
+			
+			CPrism prsm = new CPrism(prsmNum, intent);
 		}
 			
 		return prisms;

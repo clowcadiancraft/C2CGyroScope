@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-public abstract class c2cLocal 
+public class c2cLocal 
 {
 	
 	public String[] bases = {"foundation", "passion", "manifestation", "compassion",
@@ -25,7 +25,7 @@ public abstract class c2cLocal
 					"C:/Users/Andrew/eclipse-workspace/C2cScope/src/BaseCategories.txt"));
 			for (int i = 0; i < patterns.length; i++)
 			{
-				this.patterns[i] = patReader.readLine();
+				this.categories[i] = patReader.readLine();
 				//System.out.println(this.patterns[i]);
 			}
 			patReader.close();
@@ -36,19 +36,26 @@ public abstract class c2cLocal
 	}
 	
 	public String getPattern(int intent)
+	{		
+		return this.patterns[intent];		
+	}
+	
+	public String getRow(int intent)
 	{
-		
-		System.arraycopy(categories, intent*6, patterns, 0, 6);
-		this.row = String.join(",", patterns[6]);
+		System.out.println(intent);
+		System.arraycopy(this.categories, (intent)*6, this.patterns, 0, 6);
+		this.row = String.join(",", this.patterns[6]);
 		return this.row;
 	}
 	
 	public String getTheme(int intent, int passion) {
 		return this.theme = this.categories[intent*passion];
 	}
+	
 	public String getTheme(int id) {
 		return this.theme = this.categories[id];
 	}
+	
 
 
 }

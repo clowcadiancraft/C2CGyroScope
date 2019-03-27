@@ -9,18 +9,20 @@ public class CPrism
 	String pat;
 	int vecIntent;
 	
-	public CPrism(int intent, int theme)
+	public CPrism(int prsmNum, int intent)
 	{		
-		//System.out.println("FOCUS PRISM:" + cLoc.getTheme(theme));
+		System.out.println("FOCUS PRISM:" + cLoc.getTheme(prsmNum));
 		
 		for(int vecNum = 0; vecNum < 6; vecNum++)
 		{
 			this.pat = this.cLoc.getPattern(intent);
-		
+			int num = vecNum--;
+			System.out.println(num);
 			System.out.println("Please choose one of the following 1-6: "
-					+ cLoc.getPattern(vecNum));
+					+ cLoc.getPattern(num));
 			this.vecIntent = this.nerve.nextInt();
 			CVector vec = new CVector(vecNum, vecNum*vecIntent);
+			
 		}
 			
 		
