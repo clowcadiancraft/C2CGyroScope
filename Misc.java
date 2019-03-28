@@ -1,9 +1,9 @@
 
+
 public class Misc {
 
-	public Misc() 
+	public void out(String out)
 	{
-		// TODO Auto-generated constructor stub
+		System.out.println(out);		
 	}
-
 }

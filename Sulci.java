@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Sulci {
+public class Sulci extends Misc{
 
 	public Sulci() throws IOException {
 		main(null);

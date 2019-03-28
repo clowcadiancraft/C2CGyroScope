@@ -1,17 +1,20 @@
 import java.io.IOException;
 
-public class Threads {
+public class Threads extends Misc{
+	
+	public String threads;
 
 	public Threads() throws IOException 
 	{
-		main(null);
+		//Misc
+		//main(null);
 	}
 
 	public static void main(String[] args) throws IOException 
 	{
-		System.out.println("THREADS");
-		
-
+		Misc.
 	}
+	
+
 
 }

@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Cortex {
+public class Cortex extends Misc{
 
 	public Cortex() throws IOException {
 		main(null);
