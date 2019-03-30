@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class R {
 	
-	public String rb[] = new String[3];
+	public String threads;
+	
+	public String r0b2[] = new String[3];
 	
 	public R() {}
 	
@@ -21,6 +23,14 @@ public class R {
 	{
 		this.ob(g);
 		return this.og();
+	}
+	
+	public void orb()
+	{
+		for (String r : r0b2)
+		{
+			this.ob(r);
+		}
 	}
 	
 }

@@ -4,7 +4,7 @@ public class Threads extends R{
 	
 	public static R r = new R();
 	
-	public String threads;
+	
 
 	public Threads() throws IOException 
 	{
@@ -13,8 +13,9 @@ public class Threads extends R{
 
 	public static void main(String[] args) throws IOException 
 	{		
-		r.rb[0] = r.obg("Please enter current state: ");
-		r.rb[1] = r.obg("Please enter previous state: ");
-		r.rb[2] = r.obg("Please enter optimum state: ");
+		r.r0b2[0] = r.obg("Please enter current state: ");
+		r.r0b2[1] = r.obg("Please enter previous state: ");
+		r.r0b2[2] = r.obg("Please enter optimum state: ");
+		//r.orb();
 	}
 }
