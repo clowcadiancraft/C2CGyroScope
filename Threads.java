@@ -12,10 +12,9 @@ public class Threads extends R{
 	}
 
 	public static void main(String[] args) throws IOException 
-	{
-		String state, rew, forw;
-		
-		state = r.bg("Please enter current state: ");
-		r.b(state);
+	{		
+		r.rb[0] = r.obg("Please enter current state: ");
+		r.rb[1] = r.obg("Please enter previous state: ");
+		r.rb[2] = r.obg("Please enter optimum state: ");
 	}
 }

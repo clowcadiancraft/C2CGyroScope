@@ -9,7 +9,7 @@ public class Neuron extends R{
 	}
 
 	public static void main(String[] args) throws IOException {
-		r.b("NEURON");
+		r.ob("NEURON");
 		Threads.main(null);
 	}
 

@@ -9,7 +9,7 @@ public class Cortex extends R{
 	}
 
 	public static void main(String[] args) throws IOException {
-		r.b("CORTEX");
+		r.ob("CORTEX");
 		for (int sulcus = 0; sulcus < 6; sulcus++)
 		{
 			Sulci.main(null);
