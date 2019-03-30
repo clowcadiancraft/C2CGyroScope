@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Neuron extends Misc{
+public class Neuron extends R{
 
 	public Neuron() throws IOException {
 		main(null);
