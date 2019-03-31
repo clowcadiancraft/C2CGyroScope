@@ -1,36 +1,90 @@
-import java.util.Scanner;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.*;
 
 public class R {
 	
-	public String threads;
+
+	Scanner o;
+	public String rpi = "Script.txt";
+	public List<String> r0r0 = new ArrayList<String>();
+	public String r0pi0;
+	public String r0b0;	
+	public String r0b1[] = new String[3];
 	
-	public String r0b2[] = new String[3];
+	public R() {this.orr();}
 	
-	public R() {}
-	
-		public void ob(String g)
-	{
+	public void ob(String g)
+	{	
 		System.out.println(g);		
 	}
 	
 	public String og()
 	{
-		Scanner o = new Scanner(System.in);
+		//this.ob("OG");
+		
+		this.o = new Scanner(System.in);
 		return o.nextLine();
 	}
 	
 	public String obg(String g)
 	{
+		//this.ob("OBG");
+		
 		this.ob(g);
 		return this.og();
 	}
 	
 	public void orb()
 	{
-		for (String r : r0b2)
+		//this.ob("ORB");
+		
+		for (String r : r0b1)
 		{
 			this.ob(r);
 		}
+	}
+	
+	public void orpi()
+	{
+		//this.ob("ORPI");
+		
+		this.ob(r0pi0);	
+	}
+	
+	public void orr()
+	{		
+		File pir = new File("C:\\Users\\Andrew\\eclipse-workspace\\C2cScope\\src\\script.txt");
+		try 
+		{
+			this.o = new Scanner(new File(rpi));
+			if (pir.createNewFile())
+			{				
+				while (o.hasNextLine()) this.ob(o.nextLine());				
+			}
+		}
+		catch (IOException e) 
+		{
+			try 
+			{
+				pir.createNewFile();
+			} 
+			catch (IOException e1) 
+			{
+				e1.printStackTrace();
+			}
+		}
+		  
+		
+		 
+		//Write Content
+		//FileWriter writer = new FileWriter(file);
+		//writer.write("Test data");
+		//writer.close();
+		
+		
 	}
 	
 }

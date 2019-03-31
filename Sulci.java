@@ -9,7 +9,10 @@ public class Sulci extends R{
 	}
 
 	public static void main(String[] args) throws IOException {
+		
+		r.r0pi0 += "p0";
 		r.ob("SULCI");
+		
 		for (int neurons = 0; neurons < 6; neurons++)
 		{
 			Neuron.main(null);
