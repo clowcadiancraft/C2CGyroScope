@@ -1,7 +1,5 @@
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class R {
@@ -80,7 +78,21 @@ public class R {
 		
 		 
 		//Write Content
-		//FileWriter writer = new FileWriter(file);
+		try {
+			
+			FileWriter pio = new FileWriter(pir);
+			String[] ry = {"r", "o", "y", "g", "b", "p", "pi"};
+			
+			for (int y = 0; y < 7; y++)
+			{
+				pio.write(ry[y]);
+			}
+			
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
 		//writer.write("Test data");
 		//writer.close();
 		
