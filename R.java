@@ -62,40 +62,28 @@ public class R {
 			{				
 				while (o.hasNextLine()) this.ob(o.nextLine());				
 			}
+			else this.ob("dd");
 		}
 		catch (IOException e) 
 		{
 			try 
 			{
 				pir.createNewFile();
+				
+				FileWriter pio = new FileWriter(pir);
+				String[] ry = {"r", "o", "y", "g", "b", "p", "pi"};
+				
+				for (int y = 0; y < 7; y++)
+				{
+					pio.write(ry[y]+"\n#0");
+				}
+				pio.close();
 			} 
 			catch (IOException e1) 
 			{
 				e1.printStackTrace();
 			}
-		}
-		  
-		
-		 
-		//Write Content
-		try {
-			
-			FileWriter pio = new FileWriter(pir);
-			String[] ry = {"r", "o", "y", "g", "b", "p", "pi"};
-			
-			for (int y = 0; y < 7; y++)
-			{
-				pio.write(ry[y]);
-			}
-			
-		} 
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
-		//writer.write("Test data");
-		//writer.close();
-		
+		}		
 		
 	}
 	
