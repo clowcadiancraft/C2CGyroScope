@@ -11,8 +11,9 @@ public class R {
 	public String r0pi0;
 	public String r0b0;	
 	public String r0b1[] = new String[3];
+	public PI pi = new PI();
 	
-	public R() {this.orr();}
+	public R() {	}
 	
 	public void ob(String g)
 	{	
@@ -50,41 +51,6 @@ public class R {
 		//this.ob("ORPI");
 		
 		this.ob(r0pi0);	
-	}
-	
-	public void orr()
-	{		
-		File pir = new File("C:\\Users\\Andrew\\eclipse-workspace\\C2cScope\\src\\script.txt");
-		try 
-		{
-			this.o = new Scanner(new File(rpi));
-			if (pir.createNewFile())
-			{				
-				while (o.hasNextLine()) this.ob(o.nextLine());				
-			}
-			else this.ob("dd");
-		}
-		catch (IOException e) 
-		{
-			try 
-			{
-				pir.createNewFile();
-				
-				FileWriter pio = new FileWriter(pir);
-				String[] ry = {"r", "o", "y", "g", "b", "p", "pi"};
-				
-				for (int y = 0; y < 7; y++)
-				{
-					pio.write(ry[y]+"\n#0");
-				}
-				pio.close();
-			} 
-			catch (IOException e1) 
-			{
-				e1.printStackTrace();
-			}
-		}		
-		
 	}
 	
 }
