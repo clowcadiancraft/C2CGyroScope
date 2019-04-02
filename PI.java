@@ -3,18 +3,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class PI extends R{
+public class PI {
+	
+	public File pir = new File("C:\\Users\\Andrew\\eclipse-workspace\\C2cScope\\src\\script.txt");
+	public Scanner o;
+	public String[] ry = {"r", "o", "y", "g", "b", "p", "pi"};
 
-	public PI() {
-		File pir = new File("C:\\Users\\Andrew\\eclipse-workspace\\C2cScope\\src\\script.txt");
+	public PI(String rpi) {
+		
 		try 
 		{
 			this.o = new Scanner(new File(rpi));
 			if (pir.createNewFile())
 			{				
-				while (o.hasNextLine()) this.ob(o.nextLine());				
+				while (this.o.hasNextLine()) R.ob(this.o.nextLine());				
 			}
-			else this.ob("dd");
+			else R.ob("dd");
 		}
 		catch (IOException e) 
 		{
@@ -23,11 +27,10 @@ public class PI extends R{
 				pir.createNewFile();
 				
 				FileWriter pio = new FileWriter(pir);
-				String[] ry = {"r", "o", "y", "g", "b", "p", "pi"};
-				
+								
 				for (int y = 0; y < 7; y++)
 				{
-					pio.write(ry[y]+"\n#0\n");
+					pio.write(this.ry[y]+"\n#0\n");
 				}
 				pio.close();
 			} 
@@ -35,12 +38,18 @@ public class PI extends R{
 			{
 				e1.printStackTrace();
 			}
-		}
+		}		
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	}
+	
+	public void orr()
+	{		
+		
+		
 	}
 
 }

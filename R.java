@@ -11,11 +11,13 @@ public class R {
 	public String r0pi0;
 	public String r0b0;	
 	public String r0b1[] = new String[3];
-	public PI pi = new PI();
 	
-	public R() {	}
 	
-	public void ob(String g)
+	public R() {
+		PI pi = new PI(rpi);
+		}
+	
+	public static void ob(String g)
 	{	
 		System.out.println(g);		
 	}
@@ -52,5 +54,7 @@ public class R {
 		
 		this.ob(r0pi0);	
 	}
+	
+	
 	
 }
